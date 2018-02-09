@@ -1,0 +1,13 @@
+<div class="row center-xs line-buttons">
+  <button mat-raised-button color="primary" [routerLink]="['/register']">Adicionar</button>
+</div>
+
+<div class="row center-xs">
+  <mat-card>
+    <mat-list role="list">
+      <mat-list-item *ngFor="let time of todos">{{time.nome}} - {{time.pontos}}pts.
+        <button mat-button color="accent" (click)="remove(time)">Remover</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>
